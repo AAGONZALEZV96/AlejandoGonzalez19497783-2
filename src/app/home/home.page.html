@@ -1,20 +1,31 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+    <ion-title>Prueba API EN LATIN</ion-title>
   </ion-toolbar>
 </ion-header>
+<ion-content class="ion-padding">
+  
+  @for(dato of datos; track dato) {
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>{{dato.title}}</ion-card-title>
+        <ion-card-subtitle>id ='{{dato.id}}'</ion-card-subtitle>
+      </ion-card-header>
+    
+      <ion-card-content>
+        {{dato.body}}
+      </ion-card-content>
+      <ion-button href="https://jsonplaceholder.typicode.com/guide/" expand="block" > PINCHAME :33 MAS INFO</ion-button>
+    </ion-card>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+    
+  }
+
 </ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-title>kkk</ion-title>
+  </ion-toolbar>
+</ion-footer>
